@@ -1,0 +1,364 @@
+/* CSS Style Sheet */
+
+/* Resetting Default Values */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    min-height: 100vh;
+    font-family: 'Space-Grotesk', sans-serif;
+    color: #EEEEEE;
+    background-color: #EEEEEE;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Home Page Nav-Bar Design */
+.navbar {
+    padding: 12px;
+    display: flex;
+    background-color: #373A40;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    justify-content: flex-end;
+    align-items: center;
+    height: 14px;
+}
+
+.navbar div:first-child {
+    margin-right: auto;
+}
+
+.navbar :hover {
+    color: #dc5f00;
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Nav-Bar Search-Bar */
+.nav-search {
+    display: flex;
+    align-items: center;
+    margin-right: 3px;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+    height: 27px;
+
+}
+
+#search {
+    display: none;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #373A40;
+    border: 1px solid #373A40;
+    padding: 1px 10px;
+    cursor: text;
+}
+
+#search:focus {
+    outline: none;
+    border-color: #373A40;
+    background-color: #686D76;
+}
+
+#search::placeholder {
+    color: #EEEEEE;
+    font-size: 14px;
+}
+
+input {
+    margin: 3px 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#submit {
+    padding: 2px 16px;
+    background-color: #373A40;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%23dc5f00"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 23px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #EEEEEE;
+    text-indent: -9999px;
+}
+
+#submit:hover {
+    background-color: #686D76;
+}
+
+#nav-search-close {
+    display: none;
+    background-color: #373A40;
+    border: none;
+    cursor: pointer;
+}
+
+#nav-search-close :hover{
+    background-color: #686D76;
+    border-radius: 4px;
+}
+
+
+#nav-search-close svg {
+    width: 20px;
+    height: 20px;
+    fill: #dc5f00;
+    vertical-align: middle;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Nav-Bar Order Cart */
+.nav-order-cart{
+    display: block;
+    background: none;
+    border: none;
+    text-decoration: none;
+    margin: 0px 10px;
+    cursor: pointer; 
+}
+
+.nav-order-cart a :hover{
+    background-color: #686D76;
+
+}
+
+/* -------------------------------------------------------------------------- */
+/* Nav-bar Hamburger Menu */
+.nav-hamburger-menu {
+    position: relative;
+}
+
+.nav-hamburger-menu button {
+    display: block;
+    background: none;
+    border: none;
+    color: #dc5f00;
+    text-decoration: none;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.nav-hamburger-menu button :hover{
+    background-color: #686D76;
+}
+
+.ul-nav-hbm {
+    list-style-type: none;
+    display: none;
+    position: fixed;
+    top: 37px;
+    right: 0;
+    width: 300px;
+    background-color: #686D76;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 1000;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    background-color: rgba(104, 109, 118, 0.5);
+}
+
+.ul-nav-hbm li {
+    margin: 10px 0;
+}
+
+.ul-nav-hbm button,
+.ul-nav-hbm a{
+    display: inline-block;
+    padding: 8px 16px;
+    color: #EEEEEE;
+    background: none;
+    border: none;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.ul-nav-hbm button:hover,
+.ul-nav-hbm a:hover {
+    color: #FF8800;
+    border-bottom: 3px solid #dc5f00;
+    background-color: #717171;
+    border-radius: 3px;
+}
+
+.nav-hamburger-menu.active .ul-nav-hbm {
+    display: block;
+}
+
+/* Responsive Design for Nav-Bar for */
+@media (max-width: 575.98px) {
+    .navbar {
+        height: 10px;
+    }
+
+    #search {
+        font-size: 6px;
+        padding: 5px 10px;
+    }
+
+    #search::placeholder {
+        font-size: 8px;
+    }
+
+    .nav-search {
+        height: 22px;
+    }
+
+    #submit {
+        padding: 3px 10px;
+        background-size: 20px 17px;
+    }
+
+    .ul-nav-hbm{
+        top: 33px;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .nav-logo {
+        display: none;
+    }
+
+    #search {
+        font-size: 6px;
+        padding: 5px 0px;
+        
+    }
+
+    #search::placeholder {
+        font-size: 8px;
+    }
+
+    .ul-nav-hbm {
+        width: 100vw;
+    }
+}
+
+@media (max-width:241px) {
+
+    .nav-search {
+        display: none;
+    }
+
+    .ul-nav-hbm {
+        width: 100vw;
+    }
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/* Coursel Desinging */
+.slides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.slideshow-container {
+    max-width: 100vw;
+    position: relative;
+    margin: auto;
+    background-color: #dc5f00;
+}
+
+.dot-container {
+    z-index: 2;
+    position: absolute;
+    top: 72.8vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    cursor: default;
+}
+
+.dot {
+    height: 10px;
+    width: 25px;
+    margin: 0 2px;
+    background-color: #bbb;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.imgb {
+    animation-name: fade;
+    animation-duration: 1.55s;
+}
+
+@keyframes fade {
+    from {
+        border-radius: 10%;
+    }
+    to {
+        border-radius: 0%;
+    }
+}
+
+/* Responsive design for the Coursel */
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px;
+    }
+
+    .dot {
+        height: 6px;
+        width: 4px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .dot {
+        height: 8px;
+        width: 20px;
+        margin: 0 3px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .dot {
+        height: 6px;
+        width: 12px;
+        margin: 0 2px;
+    }
+}
+
+@media only screen and (max-width: 177px) {
+    .dot-container {
+        display: none;
+    }
+}
+
+
+/* ----------------------------------------------------------------------------------- */
+/* Separation line after the coursel */
+
+.separation {
+    border-bottom: 10px solid rgba(104, 109, 118, 0.5);
+}
