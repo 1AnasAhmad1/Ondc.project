@@ -330,26 +330,22 @@ img {
 .imgb {
     animation-name: fade;
     animation-duration: 1.5s;
-    /* Adjust the duration as needed */
     animation-fill-mode: both;
-    /* Ensures the element stays at the end of the animation */
 }
 
 @keyframes fade {
     from {
         transform: translateX(100%);
         opacity: 0;
-        /* Use 0 instead of 0% for opacity */
     }
 
     to {
         transform: translateX(0%);
         opacity: 1;
-        /* Use 1 instead of 100% for opacity */
     }
 }
 
-/* Responsive design for the Coursel */
+/* Responsive design for the Carousel */
 @media only screen and (max-width: 300px) {
     .text {
         font-size: 11px;
@@ -361,8 +357,8 @@ img {
     }
 }
 
-@media (min-width:769px) and (max-width:1079){
-    .dot-container{
+@media (min-width: 769px) and (max-width: 1079px) {
+    .dot-container {
         top: 72.2vh;
     }
 }
