@@ -391,7 +391,7 @@ img {
 
 
 /* ----------------------------------------------------------------------------------- */
-/* Separation line after the coursel */
+/* Separation line after the coursel, Categories Display*/
 .separation {
     border-bottom: 10px solid rgba(104, 109, 118, 0.5);
 }
@@ -576,6 +576,10 @@ img {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto;
         height: auto;
+    }
+
+    .image-description{
+        font-size: 0.6em;
     }
 
     .category2,
