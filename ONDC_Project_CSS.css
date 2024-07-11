@@ -435,7 +435,6 @@ img {
     padding-top: 6px;
     padding-left: 3px;
     padding-right: 3px;
-    padding-bottom: 3px;
     margin-top: 23px;
     text-align: center;
     background-color: #EEEEEE;
@@ -484,8 +483,6 @@ img {
     row-gap: 18px;
     column-gap: 12px;
     padding-top: 22px;
-    padding-left: 10px;
-    padding-right: 10px;
     justify-content: center;
 }
 
@@ -499,6 +496,7 @@ img {
     vertical-align: middle;
     width: 100%;
     height: auto;
+    border-radius: 3px;
     object-fit: cover;
     transition: all 0.5s ease-in-out;
 }
@@ -525,6 +523,7 @@ img {
     right: 0;
     margin: 0 auto;
     margin-top: 7%;
+    margin-bottom: 2%;
     background-color: #dc5f00;
     border: none;
     width: 80%;
@@ -545,13 +544,48 @@ img {
 }
 
 /* Responsive Designing of the Category Bar for the Homepage */
-@media (min-width: 651px) and (max-width: 1079px){
-    .homepage-categories{
+@media (max-width: 370px) {
+    .homepage-categories {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        height: auto;
+        column-gap: 0;
+    }
+    
+    .image-description{
+        font-size: calc(0.6em + 0.4vw);
+    }
+    
+    .category2,
+    .category3,
+    .category4,
+    .category5 {
+        display: none;
+    }
+}
+ 
+@media (max-width: 400px){
+    .image-description{
+        font-size: 0.7em;
+    }
+}
+
+
+@media (max-width: 554px){
+    .homepage-categories {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
         height: auto;
     }
-
-    .category4{
-        height: auto;
+    
+    .image-description{
+        font-size: calc(0.8em + 0.4vw);
+    }
+    
+    .category3,
+    .category4,
+    .category5 {
+        display: none;
     }
 }
 
@@ -561,37 +595,23 @@ img {
         grid-template-rows: auto auto auto;
         height: auto;
     }
-
+    
     .category4,
     .category5 {
         display: none;
     }
 }
 
-@media (max-width: 400px){
-    .image-description{
-        font-size: 0.7em;
-    }
-}
-
-@media (max-width: 370px) {
-    .homepage-categories {
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto;
+@media (min-width: 730px) and (max-width: 1079px){
+    .homepage-categories{
         height: auto;
     }
-
-    .image-description{
-        font-size: 0.6em;
-    }
-
-    .category2,
-    .category3,
-    .category4,
-    .category5 {
-        display: none;
+    
+    .category4{
+        height: auto;
     }
 }
+
 
 /* ----------------------------------------------------------------------------------- */
 /* Product banner Designing */
@@ -601,10 +621,11 @@ img {
     flex-wrap: wrap;
     justify-content: space-evenly;
     background: rgba(104, 109, 118, 0.5);
+    margin-bottom: 10px;
 }
 
 .product-card{
-    width: 28vw;
+    width: 25vw;
     margin: 1%;
     text-align: center;
     padding: 1%;
@@ -624,32 +645,46 @@ img {
 
 .product-card img{
     height: 50%;
-    width: 90%;
+    width: 100%;
     object-fit: cover;
     vertical-align: middle;
     margin-bottom: 0.5em;
-    border-top-left-radius: 10px ;
+    border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-.product-card img :hover{
+.product-card img:hover{
     opacity: 0.5;
     transition: all 0.5s ease-in-out;
-
 }
 
-/* Responive design for the product display */
+/* Responsive design for the product display */
+
+@media (max-width: 768px){
+    .product-card{
+        width: 20vw; /* Adjust width for small screens */
+    }
+
+    .product-card p{
+        font-size: calc(0.8em + 0.2vw); /* Responsive font size */
+    }
+}
 
 @media (max-width: 596px){
+    .product-card{
+        width: 40vw; /* Adjust width for extra small screens */
+    }
     .product-card p{
-        font-size: 0.8em;
+        font-size: calc(0.8em + 0.2vw); /* Responsive font size */
     }
 }
 
 @media (max-width: 370px){
+    .product-card{
+        width: 45%; /* Full width for smallest screens */
+    }
     .product-card p{
-        font-size: 0.6em;
+        font-size: calc(0.6em + 0.4vw); /* Responsive font size */
     }
 }
-
