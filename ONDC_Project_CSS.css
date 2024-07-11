@@ -499,7 +499,6 @@ img {
     vertical-align: middle;
     width: 100%;
     height: auto;
-    border-radius: 4px;
     object-fit: cover;
     transition: all 0.5s ease-in-out;
 }
@@ -510,14 +509,13 @@ img {
 }
 
 .c-catry img:hover {
-    transform: scale(1.05);
     opacity: 0.5;
     transition: all 0.5s ease-in-out;
 }
 
 .catry a:hover{
-    font-size: 1.3em;
     transition: all 0.5s ease-in-out;
+    color: #686D76;
 }
 
 .category4 button{
@@ -557,23 +555,28 @@ img {
     }
 }
 
-@media (max-width: 652px) {
+@media (max-width: 730px) {
     .homepage-categories {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto auto;
         grid-template-rows: auto auto auto;
         height: auto;
     }
 
-    .category3,
     .category4,
     .category5 {
         display: none;
     }
 }
 
+@media (max-width: 400px){
+    .image-description{
+        font-size: 0.7em;
+    }
+}
+
 @media (max-width: 370px) {
     .homepage-categories {
-        grid-template-columns: 1fr;
+        grid-template-columns: auto;
         grid-template-rows: auto auto auto auto;
         height: auto;
     }
@@ -590,3 +593,62 @@ img {
     }
 }
 
+/* ----------------------------------------------------------------------------------- */
+/* Product banner Designing */
+
+.homepage-product-banner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: rgba(104, 109, 118, 0.5);
+}
+
+.product-card{
+    width: 28vw;
+    margin: 1%;
+    text-align: center;
+    padding: 1%;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.5) 10px 10px 0px;
+}
+
+.product-card p{
+    color: #dc5f00;
+    font-size: 1.2em;
+}
+
+.product-card a{
+    text-decoration: none;
+}
+
+.product-card img{
+    height: 50%;
+    width: 90%;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-bottom: 0.5em;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.product-card img :hover{
+    opacity: 0.5;
+    transition: all 0.5s ease-in-out;
+
+}
+
+/* Responive design for the product display */
+
+@media (max-width: 596px){
+    .product-card p{
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 370px){
+    .product-card p{
+        font-size: 0.6em;
+    }
+}

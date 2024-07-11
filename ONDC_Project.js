@@ -38,7 +38,7 @@ document.getElementById('submit').addEventListener('click', (event) => {
     
 
 // ----------------------------------------------------------------------------------------
-// Nav-Bar-Hamburger Menu JAVA
+// Nav-Bar-Hamburger Menu JAVA_SCRIPT
 
 function toggleSideBar() {
     const hamburgerMenu = document.querySelector('.nav-hamburger-menu');
