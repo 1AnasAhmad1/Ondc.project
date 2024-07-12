@@ -1,4 +1,4 @@
-    /* CSS Style Sheet */
+ /* CSS Style Sheet */
 
     /* Resetting Default Values */
     * {
@@ -699,37 +699,76 @@
 
     /* ----------------------------------------------------------------------------------- */
     /* Product slider container styling */
-/* Product slider container */
-.product-slider-container {
-    position: relative;
-    width: 100%;
-    height: 100px; /* Set height to 100px */
-    overflow: hidden;
-    background-color: #EEEEEE; /* Add a background color if desired */
-}
+    .product-slider {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    
+    .pslider-img {
+        flex: 0 0 20%; /* Adjust this value based on the number of slides you want to show */
+        transition: transform 0.5s ease-in-out;
+        position: relative;
+        padding: 6px;
+    }
+    
+    .pslider-img img {
+        width: 100%;
+        height: 68%;
+        vertical-align: middle;
+        object-fit: cover;
+    }
+    
+    .description {
+        color: #373A40;
+        text-align: center;
+        padding: 5px;
+        font-size: 0.9rem; /* Base font size */
+    }
+    
+    /* Responsive font size */
+    @media (max-width: 386px) {
+        .description {
+            font-size: 0.6rem; /* Medium devices (tablets) */
+        }
 
-/* Individual product slides */
-.product-slide {
-    display: inline-block;
-    width: 100px; /* Adjust width as needed */
-    height: 100px; /* Ensure height matches the container height */
-    margin-right: 10px; /* Space between slides */
-    text-align: center;
-}
+        .left-arrow, .right-arrow{
+            font-size: 1em;
+        }
+    }
 
-.product-slide img {
-    width: 100%;
-    height: 80%; /* Adjust height to fit within the slide */
-    object-fit: cover; /* Ensure image covers the slide */
-}
-
-.product-slide p {
-    margin: 0;
-    padding: 2px;
-    font-size: 0.8em;
-    color: #dc5f00;
-}
-
+    @media (min-width: 768px) {
+        .description {
+            font-size: 1.2rem; /* Medium devices (tablets) */
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .description {
+            font-size: 1.5rem; /* Large devices (desktops) */
+        }
+    }
+    
+    .left-arrow, .right-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2em;
+        color: #373A40;
+        cursor: pointer;
+        user-select: none;
+        z-index: 1;
+    }
+    
+    .left-arrow {
+        left: 10px;
+    }
+    
+    .right-arrow {
+        right: 10px;
+    }
+    
 
 
     /* ----------------------------------------------------------------------------------- */
